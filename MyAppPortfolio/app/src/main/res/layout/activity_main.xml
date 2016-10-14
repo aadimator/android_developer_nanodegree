@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/activity_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.aadimator.android.myappportfolio.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="@dimen/item_width"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:text="@string/titleString"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+
+    <Button
+        android:id="@+id/popularMovies"
+        style="@style/buttonStyle"
+        android:layout_below="@+id/textView"
+        android:text="@string/popular_movies"/>
+
+    <Button
+        android:id="@+id/stockHawk"
+        style="@style/buttonStyle"
+        android:layout_alignStart="@id/popularMovies"
+        android:layout_below="@id/popularMovies"
+        android:text="@string/stock_hawk"/>
+
+    <Button
+        android:id="@+id/buildBigger"
+        style="@style/buttonStyle"
+        android:layout_alignStart="@id/stockHawk"
+        android:layout_below="@id/stockHawk"
+        android:text="@string/build_bigger"/>
+
+    <Button
+        android:id="@+id/materialApp"
+        style="@style/buttonStyle"
+        android:layout_alignStart="@id/buildBigger"
+        android:layout_below="@id/buildBigger"
+        android:text="@string/material_app"/>
+
+    <Button
+        android:id="@+id/goUbiquitous"
+        style="@style/buttonStyle"
+        android:layout_alignStart="@id/materialApp"
+        android:layout_below="@id/materialApp"
+        android:text="@string/go_ubiquitous"/>
+
+    <Button
+        android:id="@+id/capstone"
+        style="@style/buttonStyle"
+        android:layout_alignStart="@id/goUbiquitous"
+        android:layout_below="@id/goUbiquitous"
+        android:text="@string/capstone"/>
+
+</RelativeLayout>
