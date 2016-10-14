@@ -1,72 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.aadimator.android.popularmovies.DetailsActivity">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/movieTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:paddingBottom="25dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:paddingTop="25dp"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-            android:textColor="@android:color/background_light"/>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="25dp">
-
-            <ImageView
-                android:id="@+id/moviePoster"
-                android:layout_width="120dp"
-                android:layout_height="180dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"/>
-
-
-            <TextView
-                android:id="@+id/movieReleaseYear"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="34dp"
-                android:layout_marginTop="19dp"
-                android:layout_toEndOf="@id/moviePoster"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"/>
-
-            <TextView
-                android:id="@+id/movieRating"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@id/movieReleaseYear"
-                android:layout_below="@id/movieReleaseYear"
-                android:layout_marginTop="11dp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
-
-            <TextView
-                android:id="@+id/moviePlot"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_below="@id/moviePoster"
-                android:paddingBottom="15dp"
-                android:paddingTop="15dp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
-
-        </RelativeLayout>
-
-    </LinearLayout>
-</ScrollView>
+<FrameLayout android:id="@+id/movie_detail_container"
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.aadimator.android.popularmovies.activities.DetailsActivity"
+             tools:ignore="MergeRootFrame"/>
