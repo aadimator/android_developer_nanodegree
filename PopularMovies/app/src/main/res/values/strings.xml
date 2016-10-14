@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Popular Movies</string>
+    <string name="empty_view_title_text">Populating the list....</string>
+    <string name="empty_view_subtitle_text">Fetching from the internet!</string>
+    <string name="connectionFailureMsg">No Network Available! Try Later</string>
+    <string name="settings_menu_item">Settings</string>
+    <string name="pref_sort_by_label">Sort By</string>
+    <string name="pref_sort_by_key" translatable="false">sort_by</string>
+    <string name="pref_sort_by_default" translatable="false">@string/pref_top_rated</string>
+    <string name="pref_popular" translatable="false">popular</string>
+    <string name="pref_popular_label">Popularity</string>
+    <string name="pref_top_rated" translatable="false">top_rated</string>
+    <string name="pref_top_rated_label">Rating</string>
+</resources>
