@@ -7,10 +7,19 @@
     <string name="action_change_units">Change Units</string>
     <string name="symbol_search">Symbol Search</string>
     <string name="content_test">Search for a Stock Symbol</string>
-    <string name="input_hint">FB</string>
+    <string name="input_hint" translatable="false">FB</string>
     <string name="input_prefill"></string>
     <string name="network_toast">Uh-oh! This app requires an internet connection</string>
     <string name="fab_content_description">Add New Stock to Database</string>
     <string name="graph_error">There was an error.</string>
     <string name="error_invalid_symbol">Invalid Symbol</string>
+    <string name="stock_already_saved">This stock is already saved!</string>
+    <string name="tag_key" translatable="false">tag</string>
+    <string name="tag_add" translatable="false">add</string>
+    <string name="symbol_key" translatable="false">symbol</string>
+    <string name="tag_periodic" translatable="false">periodic</string>
+    <string name="company_name_key" translatable="false">company_name</string>
+    <string name="labels_key" translatable="false">labels</string>
+    <string name="values_key" translatable="false">values</string>
+    <string name="error_title" translatable="false">Error</string>
 </resources>
