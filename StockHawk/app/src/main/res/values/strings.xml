@@ -12,4 +12,5 @@
     <string name="network_toast">Uh-oh! This app requires an internet connection</string>
     <string name="fab_content_description">Add New Stock to Database</string>
     <string name="graph_error">There was an error.</string>
+    <string name="error_invalid_symbol">Invalid Symbol</string>
 </resources>
