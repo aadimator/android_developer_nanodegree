@@ -38,7 +38,7 @@ public class StockDetailActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_line_graph);
+        setContentView(R.layout.activity_stock_detail);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         errorMessage = findViewById(R.id.graphError);
@@ -189,7 +189,7 @@ public class StockDetailActivity extends AppCompatActivity {
                 lineChart.setVisibility(View.GONE);
                 progressCircle.setVisibility(View.GONE);
                 errorMessage.setVisibility(View.VISIBLE);
-                setTitle("Error");
+                setTitle(getString(R.string.error_title));
             }
         });
     }

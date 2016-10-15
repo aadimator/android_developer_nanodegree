@@ -13,4 +13,6 @@
     <string name="fab_content_description">Add New Stock to Database</string>
     <string name="graph_error">There was an error.</string>
     <string name="error_invalid_symbol">Invalid Symbol</string>
+    <string name="stock_already_saved">This stock is already saved!</string>
+    <string name="error_title">Error</string>
 </resources>
