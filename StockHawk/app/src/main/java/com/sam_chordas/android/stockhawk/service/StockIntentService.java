@@ -28,16 +28,12 @@ public class StockIntentService extends IntentService {
         Log.d(StockIntentService.class.getSimpleName(), "Stock Intent Service");
         StockTaskService stockTaskService = new StockTaskService(this);
         Bundle args = new Bundle();
-        if (intent.getStringExtra(getString(R.string.tag_key)).equals(getString(R.string.tag_add))) {
-            args.putString(
-                    getString(R.string.symbol_key),
-                    intent.getStringExtra(getString(R.string.symbol_key))
-            );
+        if (intent.getStringExtra("tag").equals("add")) {
+            args.putString("symbol", intent.getStringExtra("symbol"));
         }
 
         try {
-            stockTaskService.onRunTask(new TaskParams(
-                    intent.getStringExtra(getString(R.string.tag_key)), args));
+            stockTaskService.onRunTask(new TaskParams(intent.getStringExtra("tag"), args));
         } catch (Exception e) {
             Handler handler = new Handler(getMainLooper());
             handler.post(new Runnable() {

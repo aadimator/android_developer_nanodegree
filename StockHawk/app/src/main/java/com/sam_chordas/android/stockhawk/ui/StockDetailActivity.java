@@ -38,7 +38,7 @@ public class StockDetailActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_stock_detail);
+        setContentView(R.layout.activity_line_graph);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         errorMessage = findViewById(R.id.graphError);
@@ -57,29 +57,27 @@ public class StockDetailActivity extends AppCompatActivity {
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         if (isLoaded) {
-            outState.putString(getString(R.string.company_name_key), companyName);
-            outState.putStringArrayList(getString(R.string.labels_key), labels);
+            outState.putString("company_name", companyName);
+            outState.putStringArrayList("labels", labels);
 
             float[] valuesArray = new float[values.size()];
             for (int i = 0; i < valuesArray.length; i++) {
                 valuesArray[i] = values.get(i);
             }
-            outState.putFloatArray(getString(R.string.values_key), valuesArray);
+            outState.putFloatArray("values", valuesArray);
         }
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        if (savedInstanceState != null && savedInstanceState.containsKey(
-                getString(R.string.company_name_key))
-                ) {
+        if (savedInstanceState != null && savedInstanceState.containsKey("company_name")) {
             isLoaded = true;
 
-            companyName = savedInstanceState.getString(getString(R.string.company_name_key));
-            labels = savedInstanceState.getStringArrayList(getString(R.string.labels_key));
+            companyName = savedInstanceState.getString("company_name");
+            labels = savedInstanceState.getStringArrayList("labels");
             values = new ArrayList<>();
 
-            float[] valuesArray = savedInstanceState.getFloatArray(getString(R.string.values_key));
+            float[] valuesArray = savedInstanceState.getFloatArray("values");
             for (float f : valuesArray) {
                 values.add(f);
             }
@@ -191,7 +189,7 @@ public class StockDetailActivity extends AppCompatActivity {
                 lineChart.setVisibility(View.GONE);
                 progressCircle.setVisibility(View.GONE);
                 errorMessage.setVisibility(View.VISIBLE);
-                setTitle(getString(R.string.error_title));
+                setTitle("Error");
             }
         });
     }
