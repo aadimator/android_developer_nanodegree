@@ -5,6 +5,7 @@ android {
     buildToolsVersion "24.0.3"
 
     defaultConfig {
+        testInstrumentationRunner 'android.test.InstrumentationTestRunner'
         applicationId "com.udacity.gradle.builditbigger"
         minSdkVersion 15
         targetSdkVersion 24
