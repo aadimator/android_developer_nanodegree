@@ -7,7 +7,7 @@
     <string name="action_change_units">Change Units</string>
     <string name="symbol_search">Symbol Search</string>
     <string name="content_test">Search for a Stock Symbol</string>
-    <string name="input_hint">FB</string>
+    <string name="input_hint" translatable="false">FB</string>
     <string name="input_prefill"></string>
     <string name="network_toast">Uh-oh! This app requires an internet connection</string>
     <string name="fab_content_description">Add New Stock to Database</string>
@@ -15,4 +15,5 @@
     <string name="error_invalid_symbol">Invalid Symbol</string>
     <string name="stock_already_saved">This stock is already saved!</string>
     <string name="error_title">Error</string>
+    <string name="widget_stock_hawk">Stock Hawk</string>
 </resources>
