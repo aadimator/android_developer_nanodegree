@@ -1,19 +1,33 @@
 package com.udacity.gradle.builditbigger;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.JokeTeller;
 
-public class MainActivity extends ActionBarActivity {
+
+public class MainActivity extends AppCompatActivity {
+
+    Button mTellJokeButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final JokeTeller jokeTeller = new JokeTeller();
+        mTellJokeButton = (Button) findViewById(R.id.tellJokeBtn);
+        mTellJokeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, jokeTeller.tellJoke(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 
@@ -40,7 +54,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void tellJoke(View view) {
-        Toast.makeText(this, "derp", Toast.LENGTH_SHORT).show();
+
     }
 
 
