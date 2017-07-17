@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.aadimator.android.bakingapp.R;
 import com.aadimator.android.bakingapp.data.model.Recipe;
@@ -69,6 +70,15 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
         public RecipeViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int position = getAdapterPosition();
+                    Recipe recipe = mRecipeList.get(position);
+                    Toast.makeText(view.getContext(), "ID : " + recipe.getId(), Toast.LENGTH_SHORT).show();
+                }
+            });
         }
     }
 }
