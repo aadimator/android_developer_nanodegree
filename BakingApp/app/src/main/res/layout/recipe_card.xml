@@ -14,36 +14,92 @@
         android:elevation="3dp"
         card_view:cardCornerRadius="@dimen/card_radius">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/recipe_image_view"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginBottom="278dp"
-                android:background="@color/colorPrimary"
+                android:layout_height="120dp"
+                android:background="@color/colorPrimaryLight"
+                android:padding="@dimen/card_padding"
                 card_view:srcCompat="@drawable/cupcake"/>
 
             <TextView
                 android:id="@+id/recipe_name_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/card_margin"
                 android:gravity="center"
-                android:paddingBottom="@dimen/recipe_name_padding"
-                android:paddingLeft="@dimen/recipe_name_padding"
-                android:paddingRight="@dimen/recipe_name_padding"
-                android:paddingTop="@dimen/recipe_name_padding"
-                android:textColor="@color/colorAccent"
+                android:padding="@dimen/card_padding"
                 android:textSize="@dimen/recipe_name_text_size"
                 tools:text="Nutella Pie"/>
 
-        </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/card_margin"
+                android:layout_marginBottom="@dimen/card_margin"
+                android:layout_marginEnd="80dp"
+                android:layout_marginStart="80dp"
+                android:padding="@dimen/card_padding"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/recipe_ingredients_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    card_view:srcCompat="@drawable/ic_shopping_cart"
+                    android:tint="@color/colorAccent"/>
+
+                <TextView
+                    android:id="@+id/recipe_ingredients_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    tools:text="XX"/>
+
+                <ImageView
+                    android:id="@+id/recipe_steps_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    card_view:srcCompat="@drawable/ic_description"
+                    android:tint="@color/colorAccent"/>
+
+                <TextView
+                    android:id="@+id/recipe_steps_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    tools:text="XX"/>
+
+                <ImageView
+                    android:id="@+id/recipe_servings_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    card_view:srcCompat="@drawable/ic_serving"
+                    android:tint="@color/colorAccent"/>
+
+                <TextView
+                    android:id="@+id/recipe_servings_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    tools:text="XX"/>
+            </LinearLayout>
+
+        </LinearLayout>
 
     </android.support.v7.widget.CardView>
 

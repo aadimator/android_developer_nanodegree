@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="card_margin">5dp</dimen>
-    <dimen name="card_radius">5dp</dimen>
+    <dimen name="card_radius">10dp</dimen>
     <dimen name="recipe_name_padding">10dp</dimen>
     <dimen name="recipe_name_text_size">22sp</dimen>
+    <dimen name="card_padding">8dp</dimen>
 </resources>
