@@ -12,6 +12,9 @@ import com.aadimator.android.bakingapp.data.model.Recipe;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * Created by Aadam on 7/16/2017.
  */
@@ -51,12 +54,12 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
 
     public class RecipeViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView recipeName;
+        @BindView(R.id.recipe_name_text_view)
+        TextView recipeName;
 
         public RecipeViewHolder(View itemView) {
             super(itemView);
-
-            recipeName = (TextView) itemView.findViewById(R.id.recipe_name_text_view);
+            ButterKnife.bind(this, itemView);
         }
     }
 }

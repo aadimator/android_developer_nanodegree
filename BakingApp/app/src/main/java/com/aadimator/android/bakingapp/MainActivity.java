@@ -14,6 +14,8 @@ import com.aadimator.android.bakingapp.helpers.ApiUtils;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -22,17 +24,21 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
     private RecipeService mRecipeService;
-    private RecyclerView mRecyclerView;
     private RecipeAdapter mRecipeAdapter;
+
+    @BindView(R.id.recycler_view)
+    RecyclerView mRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ButterKnife.bind(this);
+
         mRecipeService = ApiUtils.getRecipeService();
         mRecipeAdapter = new RecipeAdapter(this, new ArrayList<Recipe>(0));
-        mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+
         mRecyclerView.setLayoutManager(new GridLayoutManager(this, 1));
         mRecyclerView.setAdapter(mRecipeAdapter);
         mRecyclerView.setHasFixedSize(true);
