@@ -1,14 +1,15 @@
 package com.aadimator.android.bakingapp.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.aadimator.android.bakingapp.R;
+import com.aadimator.android.bakingapp.RecipeStepListActivity;
 import com.aadimator.android.bakingapp.data.model.Recipe;
 
 import java.util.List;
@@ -75,8 +76,11 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
                 @Override
                 public void onClick(View view) {
                     int position = getAdapterPosition();
+
                     Recipe recipe = mRecipeList.get(position);
-                    Toast.makeText(view.getContext(), "ID : " + recipe.getId(), Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(view.getContext(), "ID : " + recipe.getId(), Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(view.getContext(), RecipeStepListActivity.class);
+                    view.getContext().startActivity(intent);
                 }
             });
         }

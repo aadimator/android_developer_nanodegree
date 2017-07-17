@@ -18,6 +18,20 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name=".RecipeStepListActivity"
+            android:label="@string/title_recipestep_list"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".RecipeStepDetailActivity"
+            android:label="@string/title_recipestep_detail"
+            android:parentActivityName=".RecipeStepListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.aadimator.android.bakingapp.RecipeStepListActivity"/>
+        </activity>
     </application>
 
 </manifest>
