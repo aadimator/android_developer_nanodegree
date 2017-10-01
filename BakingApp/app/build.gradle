@@ -19,6 +19,11 @@ android {
     }
 }
 
+repositories {
+    mavenCentral()
+    maven { url 'https://maven.google.com' }
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -32,12 +37,23 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:cardview-v7:26.+'
     compile 'com.android.support:recyclerview-v7:26.+'
-    compile 'com.squareup.retrofit2:retrofit:2.3.0'
-    compile 'com.google.code.gson:gson:2.8.1'
-    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
-    compile 'com.jakewharton:butterknife:8.7.0'
     compile 'com.android.support:support-v4:26.+'
     compile 'com.android.support:design:26.+'
-    testCompile 'junit:junit:4.12'
+
+    // Retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+
+    // Gson
+    compile 'com.google.code.gson:gson:2.8.1'
+
+    // Picasso
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    // Butterknife
+    compile 'com.jakewharton:butterknife:8.7.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.7.0'
+
+    testCompile 'junit:junit:4.12'
+
 }

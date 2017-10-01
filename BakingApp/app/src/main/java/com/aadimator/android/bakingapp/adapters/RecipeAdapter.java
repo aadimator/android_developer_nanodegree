@@ -6,11 +6,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.aadimator.android.bakingapp.R;
 import com.aadimator.android.bakingapp.activities.RecipeStepListActivity;
 import com.aadimator.android.bakingapp.datamodel.Recipe;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -41,6 +43,21 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
     @Override
     public void onBindViewHolder(RecipeViewHolder holder, int position) {
         Recipe recipe = mRecipeList.get(position);
+
+        // Only load image if there's a url for the image
+        // else, load default
+        if (!recipe.getImage().isEmpty()) {
+            Picasso.with(holder.itemView.getContext())
+                    .load(recipe.getImage())
+                    .placeholder(R.drawable.cupcake)
+                    .error(R.drawable.cupcake)
+                    .into(holder.recipeImage);
+        } else {
+            Picasso.with(holder.itemView.getContext())
+                    .load(R.drawable.cupcake)
+                    .into(holder.recipeImage);
+        }
+
         holder.recipeName.setText(recipe.getName());
         holder.recipeIngredients.setText(String.valueOf(recipe.getIngredients().size()));
         holder.recipeServings.setText(String.valueOf(recipe.getServings()));
@@ -59,6 +76,8 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
 
     public class RecipeViewHolder extends RecyclerView.ViewHolder {
 
+        @BindView((R.id.recipe_image))
+        ImageView recipeImage;
         @BindView(R.id.recipe_name)
         TextView recipeName;
         @BindView(R.id.recipe_ingredients_text_view)
