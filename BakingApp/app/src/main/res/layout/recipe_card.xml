@@ -21,49 +21,49 @@
         <ImageView
             android:id="@+id/recipe_image"
             android:layout_width="0dp"
-            android:layout_height="120dp"
+            android:layout_height="180dp"
             android:background="@color/colorPrimaryLight"
             android:padding="@dimen/card_padding"
             card_view:layout_constraintHorizontal_bias="0.0"
             card_view:layout_constraintLeft_toLeftOf="parent"
             card_view:layout_constraintRight_toRightOf="parent"
-            card_view:srcCompat="@drawable/cupcake"
-            android:layout_marginTop="8dp"
-            card_view:layout_constraintTop_toBottomOf="@+id/recipe_name"/>
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:srcCompat="@drawable/cupcake"/>
 
         <TextView
             android:id="@+id/recipe_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/card_margin"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
             android:gravity="center"
             android:padding="@dimen/card_padding"
             android:textSize="@dimen/recipe_name_text_size"
+            tools:text="Nutella Pie"
             card_view:layout_constraintLeft_toLeftOf="@+id/recipe_image"
             card_view:layout_constraintRight_toRightOf="@+id/recipe_image"
-            tools:text="Nutella Pie"
-            card_view:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="8dp"/>
-
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
+            android:layout_marginTop="5dp"
+            card_view:layout_constraintTop_toBottomOf="@+id/recipe_image"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="@dimen/card_padding"
-            card_view:layout_constraintBottom_toBottomOf="parent"
-            card_view:layout_constraintLeft_toLeftOf="parent"
-            card_view:layout_constraintRight_toRightOf="parent"
+            android:paddingRight="@dimen/recipe_count_details_horizantal_padding"
+            android:paddingLeft="@dimen/recipe_count_details_horizantal_padding"
+            android:paddingStart="@dimen/recipe_count_details_horizantal_padding"
+            android:paddingEnd="@dimen/recipe_count_details_horizantal_padding"
             android:layout_marginTop="8dp"
-            card_view:layout_constraintTop_toBottomOf="@+id/recipe_image"
-            card_view:layout_constraintHorizontal_bias="0.0">
+            card_view:layout_constraintTop_toBottomOf="@+id/recipe_name"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="8dp"
+            card_view:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            card_view:layout_constraintLeft_toLeftOf="parent">
 
             <ImageView
                 android:id="@+id/recipe_ingredients_image_view"
