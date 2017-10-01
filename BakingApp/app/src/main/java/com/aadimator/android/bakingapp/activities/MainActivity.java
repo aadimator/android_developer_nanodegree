@@ -40,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
         mRecipeService = ApiUtils.getRecipeService();
         mRecipeAdapter = new RecipeAdapter(this, new ArrayList<Recipe>(0));
 
-        mRecyclerView.setLayoutManager(new GridLayoutManager(this, 1));
+        mRecyclerView.setLayoutManager(new GridLayoutManager(this,
+                getResources().getInteger(R.integer.recipe_list_columns)));
         mRecyclerView.setAdapter(mRecipeAdapter);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
