@@ -1,6 +1,6 @@
-package com.aadimator.android.bakingapp.data.remote;
+package com.aadimator.android.bakingapp.networking;
 
-import com.aadimator.android.bakingapp.data.model.Recipe;
+import com.aadimator.android.bakingapp.datamodel.Recipe;
 
 import java.util.ArrayList;
 
@@ -12,6 +12,6 @@ import retrofit2.http.GET;
  */
 
 public interface RecipeService {
-    @GET("/topher/2017/May/59121517_baking/baking.json")
+    @GET(" ")
     Call<ArrayList<Recipe>> getRecipes();
 }

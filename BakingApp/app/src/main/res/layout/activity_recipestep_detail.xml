@@ -4,7 +4,7 @@
                                                  android:layout_width="match_parent"
                                                  android:layout_height="match_parent"
                                                  android:fitsSystemWindows="true"
-                                                 tools:context="com.aadimator.android.bakingapp.RecipeStepDetailActivity"
+                                                 tools:context="com.aadimator.android.bakingapp.activities.RecipeStepDetailActivity"
                                                  tools:ignore="MergeRootFrame">
 
     <android.support.design.widget.AppBarLayout

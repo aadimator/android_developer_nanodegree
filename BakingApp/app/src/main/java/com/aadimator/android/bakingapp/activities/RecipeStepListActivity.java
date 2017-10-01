@@ -1,4 +1,4 @@
-package com.aadimator.android.bakingapp;
+package com.aadimator.android.bakingapp.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,15 +7,14 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-
-import com.aadimator.android.bakingapp.dummy.DummyContent;
+import com.aadimator.android.bakingapp.R;
+import com.aadimator.android.bakingapp.dumy.DummyContent;
+import com.aadimator.android.bakingapp.fragments.RecipeStepDetailFragment;
 
 import java.util.List;
 
@@ -43,15 +42,6 @@ public class RecipeStepListActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitle(getTitle());
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         View recyclerView = findViewById(R.id.recipestep_list);
         assert recyclerView != null;

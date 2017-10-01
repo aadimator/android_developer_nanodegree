@@ -1,4 +1,4 @@
-package com.aadimator.android.bakingapp;
+package com.aadimator.android.bakingapp.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,10 +7,11 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
+import com.aadimator.android.bakingapp.R;
 import com.aadimator.android.bakingapp.adapters.RecipeAdapter;
-import com.aadimator.android.bakingapp.data.model.Recipe;
-import com.aadimator.android.bakingapp.data.remote.RecipeService;
-import com.aadimator.android.bakingapp.helpers.ApiUtils;
+import com.aadimator.android.bakingapp.datamodel.Recipe;
+import com.aadimator.android.bakingapp.networking.ApiUtils;
+import com.aadimator.android.bakingapp.networking.RecipeService;
 
 import java.util.ArrayList;
 

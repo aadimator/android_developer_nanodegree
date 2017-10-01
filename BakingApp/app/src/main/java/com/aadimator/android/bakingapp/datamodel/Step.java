@@ -1,4 +1,4 @@
-package com.aadimator.android.bakingapp.data.model;
+package com.aadimator.android.bakingapp.datamodel;
 
 /**
  * Created by Aadam on 7/16/2017.

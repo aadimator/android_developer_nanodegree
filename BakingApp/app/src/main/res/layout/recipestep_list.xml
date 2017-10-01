@@ -9,5 +9,5 @@
                                         android:layout_marginLeft="16dp"
                                         android:layout_marginRight="16dp"
                                         app:layoutManager="LinearLayoutManager"
-                                        tools:context="com.aadimator.android.bakingapp.RecipeStepListActivity"
+                                        tools:context="com.aadimator.android.bakingapp.activities.RecipeStepListActivity"
                                         tools:listitem="@layout/recipestep_list_content"/>

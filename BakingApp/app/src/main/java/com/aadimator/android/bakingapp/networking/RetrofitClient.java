@@ -1,4 +1,4 @@
-package com.aadimator.android.bakingapp.data.remote;
+package com.aadimator.android.bakingapp.networking;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

@@ -1,4 +1,4 @@
-package com.aadimator.android.bakingapp.data.model;
+package com.aadimator.android.bakingapp.datamodel;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

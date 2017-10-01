@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -19,18 +19,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RecipeStepListActivity"
+            android:name=".activities.RecipeStepListActivity"
             android:label="@string/title_recipestep_list"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".RecipeStepDetailActivity"
+            android:name=".activities.RecipeStepDetailActivity"
             android:label="@string/title_recipestep_detail"
-            android:parentActivityName=".RecipeStepListActivity"
+            android:parentActivityName=".activities.RecipeStepListActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.aadimator.android.bakingapp.RecipeStepListActivity"/>
+                android:value="com.aadimator.android.bakingapp.activities.RecipeStepListActivity"/>
         </activity>
     </application>
 

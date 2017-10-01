@@ -9,8 +9,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.aadimator.android.bakingapp.R;
-import com.aadimator.android.bakingapp.RecipeStepListActivity;
-import com.aadimator.android.bakingapp.data.model.Recipe;
+import com.aadimator.android.bakingapp.activities.RecipeStepListActivity;
+import com.aadimator.android.bakingapp.datamodel.Recipe;
 
 import java.util.List;
 
@@ -59,7 +59,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
 
     public class RecipeViewHolder extends RecyclerView.ViewHolder {
 
-        @BindView(R.id.recipe_name_text_view)
+        @BindView(R.id.recipe_name)
         TextView recipeName;
         @BindView(R.id.recipe_ingredients_text_view)
         TextView recipeIngredients;

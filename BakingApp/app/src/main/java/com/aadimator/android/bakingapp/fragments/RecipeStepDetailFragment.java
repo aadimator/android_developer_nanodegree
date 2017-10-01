@@ -1,15 +1,18 @@
-package com.aadimator.android.bakingapp;
+package com.aadimator.android.bakingapp.fragments;
 
 import android.app.Activity;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.os.Bundle;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.aadimator.android.bakingapp.dummy.DummyContent;
+import com.aadimator.android.bakingapp.R;
+import com.aadimator.android.bakingapp.activities.RecipeStepDetailActivity;
+import com.aadimator.android.bakingapp.activities.RecipeStepListActivity;
+import com.aadimator.android.bakingapp.dumy.DummyContent;
 
 /**
  * A fragment representing a single RecipeStep detail screen.
