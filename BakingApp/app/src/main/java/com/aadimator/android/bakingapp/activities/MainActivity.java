@@ -24,11 +24,12 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
-    private RecipeService mRecipeService;
-    private RecipeAdapter mRecipeAdapter;
-
+    private final String RECIPE_LIST_KEY = "recipe_list_key";
     @BindView(R.id.recycler_view)
     RecyclerView mRecyclerView;
+    private RecipeService mRecipeService;
+    private RecipeAdapter mRecipeAdapter;
+    private ArrayList<Recipe> mRecipes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +38,14 @@ public class MainActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
+        if (savedInstanceState != null) {
+            if (savedInstanceState.containsKey(RECIPE_LIST_KEY)) {
+                mRecipes = savedInstanceState.getParcelableArrayList(RECIPE_LIST_KEY);
+            }
+        }
+
         mRecipeService = ApiUtils.getRecipeService();
-        mRecipeAdapter = new RecipeAdapter(this, new ArrayList<Recipe>(0));
+        mRecipeAdapter = new RecipeAdapter(new ArrayList<Recipe>(0));
 
         mRecyclerView.setLayoutManager(new GridLayoutManager(this,
                 getResources().getInteger(R.integer.recipe_list_columns)));
@@ -46,7 +53,12 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
-        loadRecipes();
+        if (mRecipes == null || mRecipes.size() == 0) {
+            loadRecipes();
+        } else {
+            mRecipeAdapter.updateRecipes(mRecipes);
+        }
+
     }
 
     public void loadRecipes() {
@@ -54,7 +66,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<ArrayList<Recipe>> call, Response<ArrayList<Recipe>> response) {
                 if (response.isSuccessful()) {
-                    mRecipeAdapter.updateRecipes(response.body());
+                    mRecipes = response.body();
+                    mRecipeAdapter.updateRecipes(mRecipes);
                     Log.d(LOG_TAG, response.body().get(0).getName());
                 } else {
                     int statusCode = response.code();
@@ -68,6 +81,12 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(LOG_TAG, t.getMessage());
             }
         });
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putParcelableArrayList(RECIPE_LIST_KEY, mRecipes);
+        super.onSaveInstanceState(outState);
     }
 
 }
