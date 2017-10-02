@@ -25,8 +25,10 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
     private final String RECIPE_LIST_KEY = "recipe_list_key";
+
     @BindView(R.id.recycler_view)
     RecyclerView mRecyclerView;
+
     private RecipeService mRecipeService;
     private RecipeAdapter mRecipeAdapter;
     private ArrayList<Recipe> mRecipes;
@@ -68,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     mRecipes = response.body();
                     mRecipeAdapter.updateRecipes(mRecipes);
-                    Log.d(LOG_TAG, response.body().get(0).getName());
                 } else {
                     int statusCode = response.code();
                     Log.d(LOG_TAG, "Error. Status Code : " + statusCode);

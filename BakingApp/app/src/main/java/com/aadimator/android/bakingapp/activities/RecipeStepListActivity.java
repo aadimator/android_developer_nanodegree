@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.aadimator.android.bakingapp.R;
+import com.aadimator.android.bakingapp.datamodel.Recipe;
 import com.aadimator.android.bakingapp.dumy.DummyContent;
 import com.aadimator.android.bakingapp.fragments.RecipeStepDetailFragment;
 
@@ -33,6 +34,14 @@ public class RecipeStepListActivity extends AppCompatActivity {
      * device.
      */
     private boolean mTwoPane;
+
+    private static final String BUNDLE_RECIPE_DATA = "com.aadimator.android.bakingapp.recipe_data";
+
+    public static Intent newIntent(Context context, Recipe recipe) {
+        Intent intent = new Intent(context, RecipeStepListActivity.class);
+        intent.putExtra(BUNDLE_RECIPE_DATA, recipe);
+        return intent;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

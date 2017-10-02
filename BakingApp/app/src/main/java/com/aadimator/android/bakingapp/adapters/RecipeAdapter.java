@@ -95,8 +95,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
                     int position = getAdapterPosition();
 
                     Recipe recipe = mRecipeList.get(position);
-//                    Toast.makeText(view.getContext(), "ID : " + recipe.getId(), Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(view.getContext(), RecipeStepListActivity.class);
+                    Intent intent = RecipeStepListActivity.newIntent(view.getContext(), recipe);
                     view.getContext().startActivity(intent);
                 }
             });
