@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">Baking App</string>
-    <string name="title_recipestep_list">RecipeSteps</string>
-    <string name="title_recipestep_detail">RecipeStep Detail</string>
+
+    <string name="ingredients_title">Ingredients</string>
+    <string name="steps_title">Steps</string>
+    <string name="step_number_format">Step %1$d</string>
+    <string name="network_error_recipes">Error retrieving the recipes</string>
+    <string name="quantity_title">Quantity :</string>
+
 </resources>
